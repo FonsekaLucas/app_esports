@@ -1,4 +1,4 @@
-package br.com.appesports.model.enums;
+package br.com.appesports.model.news.enums;
 
 public enum Category {
     LEAGUE_OF_LEGENDS(1, "League of Legends"),
