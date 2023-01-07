@@ -1,8 +1,11 @@
 package br.com.appesports.model.reporter;
 
 import br.com.appesports.model.reporter.enums.Gender;
+
+import javax.persistence.Entity;
 import java.time.LocalDate;
 
+@Entity(name = "reporter_details")
 public class ReporterDetails {
 
   private Long idReporterDetails;
