@@ -13,7 +13,6 @@ public class ArticleController {
     public ArticleService articleService;
 
     @PostMapping
-    @ResponseBody()
     public void saveArticle(@NotNull Article article) {
         articleService.publishArticle(article);
     }
