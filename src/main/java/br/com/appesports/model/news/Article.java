@@ -43,8 +43,7 @@ public class Article {
     @Column(name = "publicationDate")
     private Date publicationDate;
 
-    @Column(name = "image")
-    @JoinColumn(name = "idImage", referencedColumnName = "idImage")
+    @OneToMany(targetEntity=Image.class, fetch=FetchType.EAGER)
     private List<Image> images;
 
 }

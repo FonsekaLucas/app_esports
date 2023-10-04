@@ -13,7 +13,7 @@ public class ArticleController {
     public ArticleService articleService;
 
     @PostMapping
-    public void saveArticle(@NotNull Article article) {
+    public void saveArticle(Article article) {
         articleService.publishArticle(article);
     }
 
