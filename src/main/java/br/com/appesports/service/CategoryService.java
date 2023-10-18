@@ -1,13 +1,14 @@
 package br.com.appesports.service;
 
+import br.com.appesports.controller.category.Categories;
 import br.com.appesports.model.news.Category;
 
 import java.util.List;
 
 public interface CategoryService {
 
-    public List<Category> getCategories();
+    Categories getCategories();
 
-    public void saveNewCategories(List<Category> category);
+    void saveNewCategory(Category category);
 
 }

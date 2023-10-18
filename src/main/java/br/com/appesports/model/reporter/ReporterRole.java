@@ -1,6 +1,6 @@
 package br.com.appesports.model.reporter;
 
-import br.com.appesports.model.reporter.enums.Profile;
+import br.com.appesports.model.reporter.enums.Role;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -13,14 +13,14 @@ import javax.persistence.*;
 @Setter
 @ToString
 @Entity(name = "report_rule")
-public class ReporterRule {
+public class ReporterRole {
 
     @Id
-    @Column(name = "idReportRule")
+    @Column(name = "idReportRole")
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private String idReportRule;
+    private String idReportRole;
 
-    @Column(name = "profile")
-    private Profile profile;
+    @Column(name = "role")
+    private String role;
 
 }

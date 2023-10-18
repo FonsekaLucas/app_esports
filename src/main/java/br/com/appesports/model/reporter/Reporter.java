@@ -1,6 +1,6 @@
 package br.com.appesports.model.reporter;
 
-import br.com.appesports.model.reporter.enums.Profile;
+import br.com.appesports.model.reporter.enums.Role;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -28,7 +28,7 @@ public class Reporter {
   @JoinColumn(name = "idReporterDetails")
   private ReporterDetails reporterDetails;
 
-  @Column(name = "profile")
-  private Profile profile;
+  @Column(name = "role")
+  private Role role;
 
 }

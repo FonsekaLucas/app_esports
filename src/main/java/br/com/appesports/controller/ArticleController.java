@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.validation.constraints.NotNull;
-@RequiredArgsConstructor
 public class ArticleController {
 
     public ArticleService articleService;
