@@ -4,10 +4,12 @@ import br.com.appesports.controller.category.Categories;
 import br.com.appesports.model.news.Category;
 import br.com.appesports.repository.CategoryRepository;
 import br.com.appesports.service.CategoryService;
+import br.com.appesports.service.handle.CategoryException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 @Service
@@ -22,8 +24,12 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
-    public void saveNewCategory(Category category) {
+    public void saveNewCategory(String categoryName) {
+        if (Objects.nonNull(repository.findByCategoryName(categoryName))) {
+            throw new CategoryException("Esta categoria já está cadastrada!");
+        }
 
+        repository.save(new Category(categoryName));
     }
 
     private Categories getCategoriesName(List<Category> categoryList) {

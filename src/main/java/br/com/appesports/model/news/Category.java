@@ -8,7 +8,6 @@ import lombok.ToString;
 import javax.persistence.*;
 import java.util.Objects;
 
-@NoArgsConstructor
 @Getter
 @Setter
 @ToString
@@ -22,5 +21,9 @@ public class Category {
 
     @Column(name = "categoryName")
     private String categoryName;
+
+    public Category(String categoryName) {
+        this.categoryName = categoryName;
+    }
 
 }

@@ -22,11 +22,7 @@ public class CategoryController {
 
     @PutMapping("/saveNewCategory")
     private void saveNewCategory(String categoryName) {
-        //VAI SAIR DAQUI, FIQUEM CALMOS
-        Category category = new Category();
-        category.setCategoryName(categoryName);
-
-        categoryService.saveNewCategory(category);
+        categoryService.saveNewCategory(categoryName);
     }
 
 }
