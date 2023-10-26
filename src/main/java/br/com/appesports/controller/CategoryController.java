@@ -1,7 +1,6 @@
 package br.com.appesports.controller;
 
-import br.com.appesports.controller.category.Categories;
-import br.com.appesports.model.news.Category;
+import br.com.appesports.controller.category.CategoriesDTO;
 import br.com.appesports.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -16,7 +15,7 @@ public class CategoryController {
     private CategoryService categoryService;
 
     @GetMapping(value =  "/getCategories", produces = MediaType.APPLICATION_JSON_VALUE)
-    private Categories getCategories() {
+    private CategoriesDTO getCategories() {
         return categoryService.getCategories();
     }
 

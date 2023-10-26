@@ -1,10 +1,10 @@
 package br.com.appesports.service;
 
-import br.com.appesports.controller.category.Categories;
+import br.com.appesports.controller.category.CategoriesDTO;
 
 public interface CategoryService {
 
-    Categories getCategories();
+    CategoriesDTO getCategories();
 
     void saveNewCategory(String categoryName);
 

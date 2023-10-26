@@ -1,6 +1,6 @@
 package br.com.appesports.service.impl;
 
-import br.com.appesports.controller.category.Categories;
+import br.com.appesports.controller.category.CategoriesDTO;
 import br.com.appesports.model.news.Category;
 import br.com.appesports.repository.CategoryRepository;
 import br.com.appesports.service.CategoryService;
@@ -19,7 +19,7 @@ public class CategoryServiceImpl implements CategoryService {
     private CategoryRepository repository;
 
     @Override
-    public Categories getCategories() {
+    public CategoriesDTO getCategories() {
         return getCategoriesName(repository.findAll());
     }
 
@@ -32,7 +32,7 @@ public class CategoryServiceImpl implements CategoryService {
         repository.save(new Category(categoryName));
     }
 
-    private Categories getCategoriesName(List<Category> categoryList) {
-        return new Categories(categoryList.stream().map(Category::getCategoryName).collect(Collectors.toList()));
+    private CategoriesDTO getCategoriesName(List<Category> categoryList) {
+        return new CategoriesDTO(categoryList.stream().map(Category::getCategoryName).collect(Collectors.toList()));
     }
 }
