@@ -10,8 +10,8 @@ import java.util.List;
 @Repository
 public interface ArticleRepository extends JpaRepository<Article, Long> {
 
-    //public Article findArticleByCategory(Category category);
+    Article findArticleByCategory(Category category);
 
-    //public List<Article> findAllByCategories(List<Category> categories);
+    List<Article> findAllByCategories(List<Category> categories);
 
 }

@@ -29,7 +29,7 @@ public class CategoryServiceImpl implements CategoryService {
             throw new CategoryException("Esta categoria já está cadastrada!");
         }
 
-        repository.save(new Category(categoryName));
+        repository.saveAndFlush(new Category(categoryName));
     }
 
     private CategoriesDTO getCategoriesName(List<Category> categoryList) {
