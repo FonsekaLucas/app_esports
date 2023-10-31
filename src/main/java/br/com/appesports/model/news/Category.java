@@ -2,6 +2,7 @@ package br.com.appesports.model.news;
 
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
@@ -9,6 +10,7 @@ import lombok.ToString;
 @Setter
 @ToString
 @Entity(name = "category")
+@NoArgsConstructor
 public class Category {
 
     @Id

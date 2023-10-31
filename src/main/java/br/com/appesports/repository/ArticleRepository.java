@@ -12,6 +12,6 @@ public interface ArticleRepository extends JpaRepository<Article, Long> {
 
     Article findArticleByCategory(Category category);
 
-    List<Article> findAllByCategories(List<Category> categories);
+//    List<Article> findAllByCategories(List<Category> categories);
 
 }
